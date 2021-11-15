@@ -52,5 +52,8 @@ const app = new Vue({
                 this.$refs.todoInput.focus();
             };
         },
+        changeStatus(todoIndex) {
+            this.todos[todoIndex].completed = !this.todos[todoIndex].completed;
+        }
     }
 })
