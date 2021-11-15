@@ -47,7 +47,12 @@
                     class="todo"
                     v-for="(todo, index) in todos"
                 >
-                    <span class="text">{{ todo.text }}</span>
+                    <span 
+                        class="text"
+                        :class="{completed: todo.completed}"
+                    >
+                        {{ todo.text }}
+                    </span>
                     <i class="far fa-trash-alt delete"></i>
                 </li>
             </ul>
