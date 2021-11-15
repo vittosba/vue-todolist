@@ -18,6 +18,7 @@
     padding: 0.5rem;
     background: #001533;
     color: white;
+    text-transform: uppercase;
 }
 
 
@@ -40,6 +41,11 @@
     flex-grow: 1;
     margin-right: 1rem;
     outline: none;
+}
+
+/* TODOS */
+.todos {
+    margin: 2rem 0;
 }
 
 .todos-list {

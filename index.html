@@ -24,13 +24,13 @@
         </header>
 
         <section class="new-todo">
-            <input type="text" placeholder="New todo">
+            <input type="text" placeholder="New todo" v-model.trim="newTodo" @keyup.enter="addTodo">
 
-            <button class="btn">Add todo</button>
+            <button class="btn" @click="addTodo">Add todo</button>
         </section>
 
         <main class="todos">
-            <ul class="todos-list">
+            <ul class="todos-list" v-if="todos.length > 0">
                 <!-- <li class="todo">
                     <span class="text">Todo text here</span>
                     <i class="far fa-trash-alt delete"></i>
@@ -59,6 +59,7 @@
                     ></i>
                 </li>
             </ul>
+            <h2 v-else>Nessun todo da visulaizzare</h2>
         </main>
     </div>
 

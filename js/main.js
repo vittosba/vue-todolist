@@ -33,11 +33,24 @@ const app = new Vue({
             },
         ],
         deletedTodos: [],
+        newTodo:'',
     },
     methods: {
         removeTodo(todoIndex) {
             const deleted = this.todos.splice(todoIndex, 1);
             this.deletedTodos.push(deleted[0]);
-        }
+        },
+        addTodo() {
+            if(this.newTodo !== '') {
+                this.todos.unshift({
+                    text: this.newTodo,
+                    completed: false,
+                });
+
+                this.newTodo = '';
+
+                this.$refs.todoInput.focus();
+            };
+        },
     }
 })
