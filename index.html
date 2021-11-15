@@ -31,7 +31,7 @@
 
         <main class="todos">
             <ul class="todos-list">
-                <li class="todo">
+                <!-- <li class="todo">
                     <span class="text">Todo text here</span>
                     <i class="far fa-trash-alt delete"></i>
                 </li>
@@ -41,6 +41,13 @@
                 </li>
                 <li class="todo">
                     <span class="text">Todo text here</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li> -->
+                <li 
+                    class="todo"
+                    v-for="(todo, index) in todos"
+                >
+                    <span class="text">{{ todo.text }}</span>
                     <i class="far fa-trash-alt delete"></i>
                 </li>
             </ul>
