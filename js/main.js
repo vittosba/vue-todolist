@@ -32,5 +32,12 @@ const app = new Vue({
                 completed: false,
             },
         ],
+        deletedTodos: [],
+    },
+    methods: {
+        removeTodo(todoIndex) {
+            const deleted = this.todos.splice(todoIndex, 1);
+            this.deletedTodos.push(deleted[0]);
+        }
     }
 })

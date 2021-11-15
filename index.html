@@ -53,7 +53,10 @@
                     >
                         {{ todo.text }}
                     </span>
-                    <i class="far fa-trash-alt delete"></i>
+                    <i 
+                        class="far fa-trash-alt delete"
+                        @click="removeTodo(index)"
+                    ></i>
                 </li>
             </ul>
         </main>
